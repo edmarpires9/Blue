@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.app-montserrat {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #404756;
+    font-size: 12px;
+}
+
+.icons {
+    display: flex;
+    gap: 5px;
+    /* espaçamento igual */
+}
+
+.icon-box {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid transparent;
+    padding: 15px;
+    margin: 5px;
+    flex-direction: column;
+    font-size: 12px;
+    transition: transform 0.2s ease;
+    /* transição suave */
+}
+
+.icon-box:hover {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid #404756;
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.icon-box:hover p {
+    color: #087ea4;
+    /* cor desejada */
+    font-weight: bold;
+    transition: font-weight 1s ease;
+    transition: color 1s ease;
+}
+
+.icon-box:active {
+    transform: scale(0.9);
+    /* reduz para 90% do tamanho */
+}
+
+a {
+    text-decoration: none;
+    /* remove o sublinhado */
+    color: inherit;
+    /* usa a mesma cor do texto ao redor */
+}
+
+.icon-box img {
+    opacity: 0;
+    /* começa invisível */
+    animation: fadeIn 1s forwards;
+    /* aplica animação de 1s */
+}
+
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* termina visível */
+  }
+}
+
+@font-face {
+  font-family: 'Excalifont';
+  src: url('../../assets/fonts/Excalifont-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1 {
+    font-family: 'Excalifont', sans-serif;
+    border-bottom: 2px solid transparent;
+}
+
+h1:hover{
+    border-bottom: 2px solid #087ea4;
+    transition: border-bottom 1s ease;
+    cursor: pointer;
+}
+
+.form-group {
+  position: relative;
+  margin: 5px 0;
+  display: flex;
+  flex-direction: row;
+  max-width: 300px;
+}
+
+.form-group input {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #99a1b3;
+  border-radius: 4px;
+  background: #99a1b3;
+  font-size: 16px;
+  color: white;
+  font-family: 'Excalifont';
+}
+
+.form-group label {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+  background: transparent; /* mesma cor do fundo */
+  padding: 0 10px;
+  color: white;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.5s ease all;
+}
+
+/* Quando o input estiver em foco ou preenchido */
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label {
+  top: 0px;
+  left: 15px;
+  font-size: 14px;
+  color: white;
+  background-color: rgba(25, 147, 228, 0.8);
+  padding: 4px 10px;
+  border-radius: 8px;
+}
